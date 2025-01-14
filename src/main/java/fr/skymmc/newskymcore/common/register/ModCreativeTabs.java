@@ -18,6 +18,8 @@ public class ModCreativeTabs {
             .icon(() -> new ItemStack(ModItems.NONAME_INGOT.get()))
             .displayItems((params, output) -> {
                 output.accept(ModItems.NONAME_INGOT.get());
+                output.accept(ModItems.NONAME_RAW_ORE.get());
+                output.accept(ModItems.NONAME_BLOCK.get());
             })
             .build()
     );
