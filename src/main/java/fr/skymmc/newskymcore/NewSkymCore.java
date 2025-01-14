@@ -1,0 +1,28 @@
+package fr.skymmc.newskymcore;
+
+import fr.skymmc.newskymcore.common.register.ModBlocks;
+import fr.skymmc.newskymcore.common.register.ModItems;
+import fr.skymmc.newskymcore.common.register.ModCreativeTabs;
+import org.slf4j.Logger;
+
+import com.mojang.logging.LogUtils;
+
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+
+// The value here should match an entry in the META-INF/neoforge.mods.toml file
+@Mod(NewSkymCore.MODID)
+public class NewSkymCore
+{
+    public static final String MODID = "newskymcore";
+    private static final Logger LOGGER = LogUtils.getLogger();
+
+
+    public NewSkymCore(IEventBus modEventBus, ModContainer modContainer) {
+
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+    }
+}

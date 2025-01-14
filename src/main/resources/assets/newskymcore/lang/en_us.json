@@ -1,5 +1,6 @@
 {
-  "itemGroup.newskymcore": "Example Mod Tab",
-  "block.newskymcore.example_block": "Example Block",
-  "item.newskymcore.example_item": "Example Item"
+  "itemGroup.newskymcore.skymmc": "Skym-Mc",
+
+  "item.newskymcore.noname_ingot": "NoName Ingot",
+  "item.newskymcore.noname_raw_ore": "Raw NoName"
 }
