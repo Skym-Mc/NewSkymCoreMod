@@ -3,6 +3,7 @@ package fr.skymmc.newskymcore;
 import fr.skymmc.newskymcore.common.register.ModBlocks;
 import fr.skymmc.newskymcore.common.register.ModItems;
 import fr.skymmc.newskymcore.common.register.ModCreativeTabs;
+import fr.skymmc.newskymcore.data.DataGenHandler;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -11,7 +12,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(NewSkymCore.MODID)
 public class NewSkymCore
 {
@@ -24,5 +24,11 @@ public class NewSkymCore
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+
+        registerDataGen(modEventBus);
+    }
+
+    private static void registerDataGen(IEventBus modEventBus){
+        modEventBus.addListener(DataGenHandler::onGatherData);
     }
 }
