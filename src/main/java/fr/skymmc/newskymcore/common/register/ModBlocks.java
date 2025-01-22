@@ -2,7 +2,6 @@ package fr.skymmc.newskymcore.common.register;
 
 import fr.skymmc.newskymcore.NewSkymCore;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
