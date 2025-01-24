@@ -16,7 +16,7 @@ import net.neoforged.fml.common.Mod;
 public class NewSkymCore
 {
     public static final String MODID = "newskymcore";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
 
     public NewSkymCore(IEventBus modEventBus, ModContainer modContainer) {
