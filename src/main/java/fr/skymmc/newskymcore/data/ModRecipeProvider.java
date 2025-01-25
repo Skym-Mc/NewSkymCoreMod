@@ -34,7 +34,11 @@ public class ModRecipeProvider extends RecipeProvider {
         nineBlockStorageRecipes(output, ModItems.NONAME_BLOCK, ModItems.NONAME_INGOT);
 
         oreBlasting(output, ModItems.NONAME_RAW_ORE, ModItems.NONAME_INGOT, 1f, 100, "noname_ingot");
+        oreBlasting(output, ModItems.NONAME_ORE_BLOCK, ModItems.NONAME_INGOT, 2f, 100, "noname_ingot_from_ore");
     }
+
+
+    /* -------------------- Méthode utilitaire pour la création de recette -------------------- */
 
     private void nineBlockStorageRecipes(RecipeOutput output, ItemLike itemPacked, ItemLike itemUnpacked){
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemUnpacked, 9)

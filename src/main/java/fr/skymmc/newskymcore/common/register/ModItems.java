@@ -14,5 +14,6 @@ public class ModItems {
     public static final DeferredItem<Item> NONAME_RAW_ORE   = ITEMS.registerSimpleItem("noname_raw_ore");
 
 
-    public static final DeferredItem<BlockItem> NONAME_BLOCK = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_BLOCK);
+    public static final DeferredItem<BlockItem> NONAME_BLOCK        = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_BLOCK);
+    public static final DeferredItem<BlockItem> NONAME_ORE_BLOCK    = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_ORE_BLOCK);
 }
