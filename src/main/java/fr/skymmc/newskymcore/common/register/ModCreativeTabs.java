@@ -17,9 +17,10 @@ public class ModCreativeTabs {
             .title(Component.translatable("itemGroup." + NewSkymCore.MODID + ".skymmc"))
             .icon(() -> new ItemStack(ModItems.NONAME_INGOT.get()))
             .displayItems((params, output) -> {
-                output.accept(ModItems.NONAME_INGOT.get());
-                output.accept(ModItems.NONAME_RAW_ORE.get());
-                output.accept(ModItems.NONAME_BLOCK.get());
+                output.accept(ModItems.NONAME_INGOT);
+                output.accept(ModItems.NONAME_RAW_ORE);
+                output.accept(ModItems.NONAME_BLOCK);
+                output.accept(ModItems.NONAME_ORE_BLOCK);
             })
             .build()
     );
