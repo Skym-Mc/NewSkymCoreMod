@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
@@ -76,5 +77,79 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, group + "_from_blasting"));
 
         oreSmelting(output, itemSource, itemBlasted, experience, cookingTime * 2, group);
+    }
+
+    private void swordCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("#")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_sword"));
+    }
+
+    private void pickaxeCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("###")
+                .pattern(" | ")
+                .pattern(" | ")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_pickaxe"));
+    }
+
+    private void axeCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("##")
+                .pattern("#|")
+                .pattern(" |")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_axe_left"));
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("##")
+                .pattern("|#")
+                .pattern("| ")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_axe_right"));
+    }
+
+    private void shovelCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("#")
+                .pattern("|")
+                .pattern("|")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_shovel"));
+    }
+
+    private void hoeCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("##")
+                .pattern(" |")
+                .pattern(" |")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_hoe_left"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("##")
+                .pattern("|")
+                .pattern("|")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_hoe_right"));
     }
 }

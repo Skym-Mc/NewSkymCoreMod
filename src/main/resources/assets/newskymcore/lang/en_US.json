@@ -4,6 +4,12 @@
   "item.newskymcore.noname_ingot": "NoName Ingot",
   "item.newskymcore.noname_raw_ore": "Raw NoName",
 
+  "item.newskymcore.noname_pickaxe": "NoName Pickaxe",
+  "item.newskymcore.noname_sword": "NoName Sword",
+  "item.newskymcore.noname_axe": "NoName Axe",
+  "item.newskymcore.noname_shovel": "NoName Shovel",
+  "item.newskymcore.noname_hoe": "NoName Hoe",
+
   "block.newskymcore.noname_block": "NoName Block",
   "block.newskymcore.nonmae_reo_block": "NoName Ore"
 }
