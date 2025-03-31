@@ -1,7 +1,6 @@
-package fr.skymmc.newskymcore.common.register;
+package fr.skymmc.newskymcore.item;
 
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.Items;
+import fr.skymmc.newskymcore.block.ModTags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;

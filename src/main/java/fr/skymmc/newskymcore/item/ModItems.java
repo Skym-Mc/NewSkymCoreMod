@@ -1,6 +1,7 @@
-package fr.skymmc.newskymcore.common.register;
+package fr.skymmc.newskymcore.item;
 
 import fr.skymmc.newskymcore.NewSkymCore;
+import fr.skymmc.newskymcore.block.ModBlocks;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;

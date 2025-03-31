@@ -1,8 +1,8 @@
 package fr.skymmc.newskymcore;
 
-import fr.skymmc.newskymcore.common.register.ModBlocks;
-import fr.skymmc.newskymcore.common.register.ModItems;
-import fr.skymmc.newskymcore.common.register.ModCreativeTabs;
+import fr.skymmc.newskymcore.block.ModBlocks;
+import fr.skymmc.newskymcore.item.ModItems;
+import fr.skymmc.newskymcore.util.ModCreativeTabs;
 import fr.skymmc.newskymcore.data.DataGenHandler;
 import org.slf4j.Logger;
 

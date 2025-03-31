@@ -2,7 +2,7 @@ package fr.skymmc.newskymcore.data;
 
 import com.google.common.collect.ImmutableList;
 import fr.skymmc.newskymcore.NewSkymCore;
-import fr.skymmc.newskymcore.common.register.ModItems;
+import fr.skymmc.newskymcore.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;

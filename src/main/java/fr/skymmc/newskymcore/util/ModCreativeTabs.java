@@ -1,6 +1,7 @@
-package fr.skymmc.newskymcore.common.register;
+package fr.skymmc.newskymcore.util;
 
 import fr.skymmc.newskymcore.NewSkymCore;
+import fr.skymmc.newskymcore.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

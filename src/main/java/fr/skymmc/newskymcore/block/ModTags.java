@@ -1,4 +1,4 @@
-package fr.skymmc.newskymcore.common.register;
+package fr.skymmc.newskymcore.block;
 
 import fr.skymmc.newskymcore.NewSkymCore;
 import net.minecraft.resources.ResourceLocation;
