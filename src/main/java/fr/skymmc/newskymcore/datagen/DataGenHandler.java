@@ -1,4 +1,4 @@
-package fr.skymmc.newskymcore.data;
+package fr.skymmc.newskymcore.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -17,6 +17,11 @@ public class DataGenHandler {
         generator.addProvider(
           event.includeServer(),
           new ModRecipeProvider(output, lookupProvider)
+        );
+
+        generator.addProvider(
+                event.includeServer(),
+                new ModDatapackProvider(output, lookupProvider)
         );
     }
 

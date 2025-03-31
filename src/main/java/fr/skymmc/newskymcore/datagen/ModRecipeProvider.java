@@ -1,4 +1,4 @@
-package fr.skymmc.newskymcore.data;
+package fr.skymmc.newskymcore.datagen;
 
 import com.google.common.collect.ImmutableList;
 import fr.skymmc.newskymcore.NewSkymCore;
