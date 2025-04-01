@@ -33,6 +33,12 @@ public class ModRecipeProvider extends RecipeProvider {
 
         oreBlasting(output, ModItems.NONAME_RAW_ORE, ModItems.NONAME_INGOT, 1f, 100, "noname_ingot");
         oreBlasting(output, ModItems.NONAME_ORE_BLOCK, ModItems.NONAME_INGOT, 2f, 100, "noname_ingot_from_ore");
+
+        pickaxeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_PICKAXE, "noname");
+        swordCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_SWORD, "noname");
+        shovelCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_SWORD, "noname");
+        axeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
+        hoeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
     }
 
 
@@ -144,8 +150,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('#', itemSource)
                 .define('|', Items.STICK)
                 .pattern("##")
-                .pattern("|")
-                .pattern("|")
+                .pattern("| ")
+                .pattern("| ")
                 .unlockedBy(getHasName(itemSource), has(itemSource))
                 .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_hoe_right"));
     }
