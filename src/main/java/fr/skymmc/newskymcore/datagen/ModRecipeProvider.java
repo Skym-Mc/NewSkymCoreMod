@@ -24,10 +24,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput output) {
-        NewSkymCore.LOGGER.debug("Debut de creation des recipe...");
         registerNonameOreRecipe(output);
-
-        NewSkymCore.LOGGER.debug("Fin de creation des recipe");
     }
 
     private void registerNonameOreRecipe(RecipeOutput output){
