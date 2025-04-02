@@ -39,6 +39,11 @@ public class ModRecipeProvider extends RecipeProvider {
         shovelCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_SHOVEL, "noname");
         axeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
         hoeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
+
+        helmetCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_HELMET, "noname");
+        chestplateCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_CHESTPLATE, "noname");
+        legginsCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_LEGGINS, "noname");
+        bootsCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_BOOTS, "noname");
     }
 
 
@@ -154,5 +159,43 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("| ")
                 .unlockedBy(getHasName(itemSource), has(itemSource))
                 .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_hoe_right"));
+    }
+
+    private void helmetCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .pattern("###")
+                .pattern("# #")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_helmet"));
+    }
+
+    private void chestplateCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_chestplate"));
+    }
+
+    private void legginsCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_leggins"));
+    }
+
+    private void bootsCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .pattern("# #")
+                .pattern("# #")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_boots"));
     }
 }

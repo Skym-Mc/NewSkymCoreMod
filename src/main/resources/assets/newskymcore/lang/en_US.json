@@ -10,6 +10,11 @@
   "item.newskymcore.noname_shovel": "NoName Shovel",
   "item.newskymcore.noname_hoe": "NoName Hoe",
 
+  "item.newskymcore.noname_helmet": "NoName Helmet",
+  "item.newskymcore.noname_chestplate": "NoName Chestplate",
+  "item.newskymcore.noname_leggins": "NoName Leggins",
+  "item.newskymcore.noname_boots": "NoName Boots",
+
   "block.newskymcore.noname_block": "NoName Block",
   "block.newskymcore.noname_ore_block": "NoName Ore"
 }

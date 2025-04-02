@@ -24,7 +24,7 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.LEGGINGS, 6);
                 attribute.put(ArmorItem.Type.CHESTPLATE, 8);
                 attribute.put(ArmorItem.Type.HELMET, 3);
-                attribute.put(ArmorItem.Type.BODY, 11);
+                attribute.put(ArmorItem.Type.BODY, 10);
             }), 10, 4f, 0.2f, ModItems.NONAME_INGOT);
 
 

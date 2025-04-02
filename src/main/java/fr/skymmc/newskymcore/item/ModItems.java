@@ -41,6 +41,21 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> NONAME_HELMET       = ITEMS.register("noname_helmet", () -> new ArmorItem(
             ModArmorMaterials.NONAME_ARMOR_MATERIAL,
             ArmorItem.Type.HELMET,
-            new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(5))
+            new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(63))
+    ));
+    public static final DeferredItem<ArmorItem> NONAME_CHESTPLATE   = ITEMS.register("noname_chestplate", () -> new ArmorItem(
+            ModArmorMaterials.NONAME_ARMOR_MATERIAL,
+            ArmorItem.Type.CHESTPLATE,
+            new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(63))
+    ));
+    public static final DeferredItem<ArmorItem> NONAME_LEGGINS      = ITEMS.register("noname_leggins", () -> new ArmorItem(
+            ModArmorMaterials.NONAME_ARMOR_MATERIAL,
+            ArmorItem.Type.LEGGINGS,
+            new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(63))
+    ));
+    public static final DeferredItem<ArmorItem> NONAME_BOOTS        = ITEMS.register("noname_boots", () -> new ArmorItem(
+            ModArmorMaterials.NONAME_ARMOR_MATERIAL,
+            ArmorItem.Type.BOOTS,
+            new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(63))
     ));
 }

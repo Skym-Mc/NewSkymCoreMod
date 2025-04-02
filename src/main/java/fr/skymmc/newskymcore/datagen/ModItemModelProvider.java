@@ -22,6 +22,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handhelItem(ModItems.NONAME_SHOVEL);
         handhelItem(ModItems.NONAME_AXE);
         handhelItem(ModItems.NONAME_HOE);
+
+        handhelItem(ModItems.NONAME_HELMET);
+        handhelItem(ModItems.NONAME_CHESTPLATE);
+        handhelItem(ModItems.NONAME_LEGGINS);
+        handhelItem(ModItems.NONAME_BOOTS);
     }
 
     private void handhelItem(DeferredItem<?> item){
