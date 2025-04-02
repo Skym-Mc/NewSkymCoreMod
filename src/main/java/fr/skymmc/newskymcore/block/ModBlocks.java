@@ -1,9 +1,7 @@
 package fr.skymmc.newskymcore.block;
 
 import fr.skymmc.newskymcore.NewSkymCore;
-import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;

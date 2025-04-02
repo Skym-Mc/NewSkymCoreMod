@@ -37,4 +37,10 @@ public class ModItems {
             ModTiers.NONAME_TIER,
             new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.NONAME_TIER, -6.0F, 0.0F))
     ));
+
+    public static final DeferredItem<ArmorItem> NONAME_HELMET       = ITEMS.register("noname_helmet", () -> new ArmorItem(
+            ModArmorMaterials.NONAME_ARMOR_MATERIAL,
+            ArmorItem.Type.HELMET,
+            new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(5))
+    ));
 }
