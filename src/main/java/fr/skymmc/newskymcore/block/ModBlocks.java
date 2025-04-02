@@ -21,14 +21,10 @@ public class ModBlocks {
             .sound(SoundType.METAL)
     );
 
-    public static final DeferredBlock<Block> NONAME_ORE_BLOCK = BLOCKS.register(
+    public static final DeferredBlock<Block> NONAME_ORE_BLOCK = BLOCKS.registerSimpleBlock(
             "noname_ore_block",
-            registryName ->
-                new DropExperienceBlock(
-                        ConstantInt.of(0),
-                        BlockBehaviour.Properties.of()
-                                .requiresCorrectToolForDrops()
-                                .strength(3.0F, 3.0F)
-                )
+            BlockBehaviour.Properties.of()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 3.0F)
     );
 }

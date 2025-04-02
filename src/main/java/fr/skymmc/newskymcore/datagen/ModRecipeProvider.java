@@ -36,7 +36,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         pickaxeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_PICKAXE, "noname");
         swordCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_SWORD, "noname");
-        shovelCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_SWORD, "noname");
+        shovelCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_SHOVEL, "noname");
         axeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
         hoeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
     }

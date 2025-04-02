@@ -45,6 +45,11 @@ public class DataGenHandler {
                 event.includeClient(),
                 new ModBlockStateProvider(output, existingFileHelper)
         );
+
+        generator.addProvider(
+                event.includeServer(),
+                new ModBlockTagProvider(output, lookupProvider, existingFileHelper)
+        );
     }
 
 }
