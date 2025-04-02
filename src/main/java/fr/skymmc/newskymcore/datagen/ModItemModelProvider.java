@@ -25,7 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handhelItem(ModItems.NONAME_HELMET);
         handhelItem(ModItems.NONAME_CHESTPLATE);
-        handhelItem(ModItems.NONAME_LEGGINS);
+        handhelItem(ModItems.NONAME_LEGGINGS);
         handhelItem(ModItems.NONAME_BOOTS);
     }
 

@@ -48,7 +48,7 @@ public class ModItems {
             ArmorItem.Type.CHESTPLATE,
             new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(63))
     ));
-    public static final DeferredItem<ArmorItem> NONAME_LEGGINS      = ITEMS.register("noname_leggins", () -> new ArmorItem(
+    public static final DeferredItem<ArmorItem> NONAME_LEGGINGS = ITEMS.register("noname_leggings", () -> new ArmorItem(
             ModArmorMaterials.NONAME_ARMOR_MATERIAL,
             ArmorItem.Type.LEGGINGS,
             new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(63))

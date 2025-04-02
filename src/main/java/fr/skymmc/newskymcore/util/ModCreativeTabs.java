@@ -24,7 +24,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.NONAME_ORE_BLOCK);
                 output.accept(ModItems.NONAME_HELMET);
                 output.accept(ModItems.NONAME_CHESTPLATE);
-                output.accept(ModItems.NONAME_LEGGINS);
+                output.accept(ModItems.NONAME_LEGGINGS);
                 output.accept(ModItems.NONAME_BOOTS);
             })
             .build()

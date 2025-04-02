@@ -42,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         helmetCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_HELMET, "noname");
         chestplateCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_CHESTPLATE, "noname");
-        legginsCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_LEGGINS, "noname");
+        legginsCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_LEGGINGS, "noname");
         bootsCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_BOOTS, "noname");
     }
 
