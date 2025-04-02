@@ -22,6 +22,11 @@ public class ModCreativeTabs {
                 output.accept(ModItems.NONAME_RAW_ORE);
                 output.accept(ModItems.NONAME_BLOCK);
                 output.accept(ModItems.NONAME_ORE_BLOCK);
+                output.accept(ModItems.NONAME_PICKAXE);
+                output.accept(ModItems.NONAME_SWORD);
+                output.accept(ModItems.NONAME_SHOVEL);
+                output.accept(ModItems.NONAME_AXE);
+                output.accept(ModItems.NONAME_HOE);
                 output.accept(ModItems.NONAME_HELMET);
                 output.accept(ModItems.NONAME_CHESTPLATE);
                 output.accept(ModItems.NONAME_LEGGINGS);
