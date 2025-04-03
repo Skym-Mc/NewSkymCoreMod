@@ -2,7 +2,7 @@ package fr.skymmc.newskymcore;
 
 import fr.skymmc.newskymcore.block.ModBlocks;
 import fr.skymmc.newskymcore.item.ModItems;
-import fr.skymmc.newskymcore.util.ModCreativeTabs;
+import fr.skymmc.newskymcore.item.ModCreativeTabs;
 import fr.skymmc.newskymcore.datagen.DataGenHandler;
 import org.slf4j.Logger;
 

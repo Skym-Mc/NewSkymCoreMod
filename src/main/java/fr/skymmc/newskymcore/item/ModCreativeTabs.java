@@ -1,7 +1,6 @@
-package fr.skymmc.newskymcore.util;
+package fr.skymmc.newskymcore.item;
 
 import fr.skymmc.newskymcore.NewSkymCore;
-import fr.skymmc.newskymcore.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,6 +26,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.NONAME_SHOVEL);
                 output.accept(ModItems.NONAME_AXE);
                 output.accept(ModItems.NONAME_HOE);
+                output.accept(ModItems.NONAME_HAMMER_ITEM);
                 output.accept(ModItems.NONAME_HELMET);
                 output.accept(ModItems.NONAME_CHESTPLATE);
                 output.accept(ModItems.NONAME_LEGGINGS);
