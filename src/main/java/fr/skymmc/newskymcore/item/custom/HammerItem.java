@@ -1,6 +1,5 @@
 package fr.skymmc.newskymcore.item.custom;
 
-import fr.skymmc.newskymcore.item.ModTiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
@@ -23,8 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HammerItem extends DiggerItem {
-    public HammerItem(Tier tier, Properties properties) {
+    private int radius;
+
+    public HammerItem(Tier tier, Properties properties, int radius) {
         super(tier, BlockTags.MINEABLE_WITH_PICKAXE, properties);
+        this.radius = radius;
     }
 
     @Override
@@ -35,15 +37,16 @@ public class HammerItem extends DiggerItem {
         ServerPlayer serverPlayer = (ServerPlayer) miningEntity;
         Tool tool = stack.get(DataComponents.TOOL);
         int damagePerBlock;
+
         if(tool != null){
             damagePerBlock = tool.damagePerBlock();
         } else {
             damagePerBlock = 1;
         }
-
         List<BlockPos> blockToMine = getBlocksToBeDestroyed(pos, serverPlayer);
         blockToMine.forEach(block -> {
-            if(isCorrectToolForDrops(stack, state)){
+            BlockState blockState = level.getBlockState(block);
+            if(isCorrectToolForDrops(stack, blockState)){
                 level.destroyBlock(block, true, miningEntity);
                 stack.hurtAndBreak(damagePerBlock, miningEntity, EquipmentSlot.MAINHAND);
             }
@@ -53,7 +56,6 @@ public class HammerItem extends DiggerItem {
 
     protected List<BlockPos> getBlocksToBeDestroyed(BlockPos initalBlockPos, ServerPlayer player) {
         List<BlockPos> positions = new ArrayList<>();
-        int range = getRadius();
 
         BlockHitResult traceResult = player.level().clip(new ClipContext(player.getEyePosition(1f),
                 (player.getEyePosition(1f).add(player.getViewVector(1f).scale(6f))),
@@ -63,37 +65,29 @@ public class HammerItem extends DiggerItem {
         }
 
         if(traceResult.getDirection() == Direction.DOWN || traceResult.getDirection() == Direction.UP) {
-            for(int x = -range; x <= range; x++) {
-                for(int y = -range; y <= range; y++) {
+            for(int x = -this.radius; x <= this.radius; x++) {
+                for(int y = -this.radius; y <= this.radius; y++) {
                     positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
                 }
             }
         }
 
         if(traceResult.getDirection() == Direction.NORTH || traceResult.getDirection() == Direction.SOUTH) {
-            for(int x = -range; x <= range; x++) {
-                for(int y = -range; y <= range; y++) {
+            for(int x = -this.radius; x <= this.radius; x++) {
+                for(int y = -this.radius; y <= this.radius; y++) {
                     positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ()));
                 }
             }
         }
 
         if(traceResult.getDirection() == Direction.EAST || traceResult.getDirection() == Direction.WEST) {
-            for(int x = -range; x <= range; x++) {
-                for(int y = -range; y <= range; y++) {
+            for(int x = -this.radius; x <= this.radius; x++) {
+                for(int y = -this.radius; y <= this.radius; y++) {
                     positions.add(new BlockPos(initalBlockPos.getX(), initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
                 }
             }
         }
 
         return positions;
-    }
-
-    protected int getRadius(){
-        if(getTier().equals(ModTiers.NONAME_TIER)){
-            return 2;
-        } else {
-            return 1;
-        }
     }
 }

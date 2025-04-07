@@ -62,6 +62,27 @@ public class ModItems {
 
     public static final DeferredItem<HammerItem> NONAME_HAMMER_ITEM = ITEMS.register("noname_hammer", () -> new HammerItem(
             ModTiers.NONAME_TIER,
-            new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.NONAME_TIER, 4.0F, -3.0F))
+            new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.NONAME_TIER, 4.0F, -3.0F)),
+            2
+    ));
+    public static final DeferredItem<HammerItem> IRON_HAMMER_ITEM = ITEMS.register("iron_hammer", () -> new HammerItem(
+            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.IRON, 4.0F, -3.0F)),
+            1
+    ));
+    public static final DeferredItem<HammerItem> GOLD_HAMMER_ITEM = ITEMS.register("gold_hammer", () -> new HammerItem(
+            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.GOLD, 4.0F, -3.0F)),
+            1
+    ));
+    public static final DeferredItem<HammerItem> DIAMOND_HAMMER_ITEM = ITEMS.register("diamond_hammer", () -> new HammerItem(
+            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 4.0F, -3.0F)),
+            1
+    ));
+    public static final DeferredItem<HammerItem> NETHERITE_HAMMER_ITEM = ITEMS.register("netherite_hammer", () -> new HammerItem(
+            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 4.0F, -3.0F)),
+            1
     ));
 }

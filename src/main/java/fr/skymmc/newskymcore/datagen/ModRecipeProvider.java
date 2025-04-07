@@ -40,6 +40,12 @@ public class ModRecipeProvider extends RecipeProvider {
         axeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
         hoeCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_AXE, "noname");
 
+        hammerCrafting(output, Items.IRON_INGOT, ModItems.IRON_HAMMER_ITEM, "iron");
+        hammerCrafting(output, Items.GOLD_INGOT, ModItems.GOLD_HAMMER_ITEM, "gold");
+        hammerCrafting(output, Items.DIAMOND, ModItems.DIAMOND_HAMMER_ITEM, "diamond");
+        hammerCrafting(output, Items.NETHERITE_INGOT, ModItems.NETHERITE_HAMMER_ITEM, "netherite");
+        hammerCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_HAMMER_ITEM, "noname");
+
         helmetCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_HELMET, "noname");
         chestplateCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_CHESTPLATE, "noname");
         legginsCrafting(output, ModItems.NONAME_INGOT, ModItems.NONAME_LEGGINGS, "noname");
@@ -159,6 +165,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("| ")
                 .unlockedBy(getHasName(itemSource), has(itemSource))
                 .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_hoe_right"));
+    }
+
+    private void hammerCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, itemOutput)
+                .define('#', itemSource)
+                .define('|', Items.STICK)
+                .pattern("###")
+                .pattern("###")
+                .pattern(" | ")
+                .unlockedBy(getHasName(itemSource), has(itemSource))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NewSkymCore.MODID, materialName + "_hammer"));
     }
 
     private void helmetCrafting(RecipeOutput output, ItemLike itemSource, ItemLike itemOutput, String materialName){
