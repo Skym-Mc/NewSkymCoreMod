@@ -66,23 +66,25 @@ public class ModItems {
             2
     ));
     public static final DeferredItem<HammerItem> IRON_HAMMER_ITEM = ITEMS.register("iron_hammer", () -> new HammerItem(
-            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            Tiers.IRON,
             new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.IRON, 4.0F, -3.0F)),
             1
     ));
     public static final DeferredItem<HammerItem> GOLD_HAMMER_ITEM = ITEMS.register("gold_hammer", () -> new HammerItem(
-            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            Tiers.GOLD,
             new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.GOLD, 4.0F, -3.0F)),
             1
     ));
     public static final DeferredItem<HammerItem> DIAMOND_HAMMER_ITEM = ITEMS.register("diamond_hammer", () -> new HammerItem(
-            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            Tiers.DIAMOND,
             new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 4.0F, -3.0F)),
             1
     ));
     public static final DeferredItem<HammerItem> NETHERITE_HAMMER_ITEM = ITEMS.register("netherite_hammer", () -> new HammerItem(
-            ModTiers.NONAME_TIER, //TODO : changer les tiers et les valeurs
+            Tiers.NETHERITE,
             new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 4.0F, -3.0F)),
             1
     ));
+
+    public static final DeferredItem<Item> SUSHI = ITEMS.registerSimpleItem("sushi", new Item.Properties().food(ModFoods.SUSHI_FOOD));
 }
