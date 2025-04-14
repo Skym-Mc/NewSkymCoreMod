@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "newskymcore:block/skym_statue"
+    },
+    "facing=south": {
+      "model": "newskymcore:block/skym_statue",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "newskymcore:block/skym_statue",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "newskymcore:block/skym_statue",
+      "y": 270
+    }
+  }
+}

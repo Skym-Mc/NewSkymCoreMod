@@ -1,6 +1,7 @@
 package fr.skymmc.newskymcore.block;
 
 import fr.skymmc.newskymcore.NewSkymCore;
+import fr.skymmc.newskymcore.block.custom.StatueBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -25,4 +26,8 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(5.0F, 3.0F)
     );
+
+    public static final DeferredBlock<StatueBlock> SKYM_STATUE = BLOCKS.register("skym_statue", () -> new StatueBlock(
+            BlockBehaviour.Properties.of().noOcclusion()
+    ));
 }

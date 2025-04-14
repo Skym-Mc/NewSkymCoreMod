@@ -24,5 +24,7 @@
   "item.newskymcore.noname_boots": "NoName Boots",
 
   "block.newskymcore.noname_block": "NoName Block",
-  "block.newskymcore.noname_ore_block": "NoName Ore"
+  "block.newskymcore.noname_ore_block": "NoName Ore",
+
+  "block.newskymcore.skym_statue": "Skym Statue"
 }

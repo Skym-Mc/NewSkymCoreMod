@@ -14,10 +14,6 @@ public class ModItems {
     public static final DeferredItem<Item> NONAME_INGOT     = ITEMS.registerSimpleItem("noname_ingot");
     public static final DeferredItem<Item> NONAME_RAW_ORE   = ITEMS.registerSimpleItem("noname_raw_ore");
 
-
-    public static final DeferredItem<BlockItem> NONAME_BLOCK        = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_BLOCK);
-    public static final DeferredItem<BlockItem> NONAME_ORE_BLOCK    = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_ORE_BLOCK);
-
     public static final DeferredItem<PickaxeItem> NONAME_PICKAXE    = ITEMS.register("noname_pickaxe", () -> new PickaxeItem(
             ModTiers.NONAME_TIER,
             new Item.Properties().attributes(PickaxeItem.createAttributes(ModTiers.NONAME_TIER, 1.0F, -2.8F))
@@ -87,4 +83,9 @@ public class ModItems {
     ));
 
     public static final DeferredItem<Item> SUSHI = ITEMS.registerSimpleItem("sushi", new Item.Properties().food(ModFoods.SUSHI_FOOD));
+
+    /* Item block */
+    public static final DeferredItem<BlockItem> NONAME_BLOCK        = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_BLOCK);
+    public static final DeferredItem<BlockItem> NONAME_ORE_BLOCK    = ITEMS.registerSimpleBlockItem(ModBlocks.NONAME_ORE_BLOCK);
+    public static final DeferredItem<BlockItem> SKYM_STATUE         = ITEMS.registerSimpleBlockItem(ModBlocks.SKYM_STATUE);
 }

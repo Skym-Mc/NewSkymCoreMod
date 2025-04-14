@@ -38,6 +38,10 @@ public class ModCreativeTabs {
                 output.accept(ModItems.NONAME_CHESTPLATE);
                 output.accept(ModItems.NONAME_LEGGINGS);
                 output.accept(ModItems.NONAME_BOOTS);
+
+                output.accept(ModItems.SUSHI);
+
+                output.accept(ModItems.SKYM_STATUE);
             })
             .build()
     );
